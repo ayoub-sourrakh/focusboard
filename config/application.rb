@@ -25,7 +25,7 @@ module Focusboard
     # config.eager_load_paths << Rails.root.join("extras")
 
     # I18n configuration
-    config.i18n.available_locales = [:en, :fr, :es, :zh]
+    config.i18n.available_locales = [ :en, :fr, :es, :zh ]
     config.i18n.default_locale = :fr
     config.i18n.fallbacks = true
   end

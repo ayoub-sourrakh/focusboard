@@ -9,7 +9,7 @@ class ApplicationController < ActionController::Base
   def set_locale
     I18n.locale = session[:locale] || I18n.default_locale
   end
-  
+
   def set_dark_mode_class
     if user_signed_in?
       current_user.reload
@@ -27,7 +27,7 @@ class ApplicationController < ActionController::Base
   protected
 
   def configure_permitted_parameters
-    devise_parameter_sanitizer.permit(:sign_up, keys: [:first_name, :last_name, :birth_date, :street_address, :city, :postal_code, :country, :photo])
-    devise_parameter_sanitizer.permit(:account_update, keys: [:first_name, :last_name, :birth_date, :street_address, :city, :postal_code, :country, :photo])
+    devise_parameter_sanitizer.permit(:sign_up, keys: [ :first_name, :last_name, :birth_date, :street_address, :city, :postal_code, :country, :photo ])
+    devise_parameter_sanitizer.permit(:account_update, keys: [ :first_name, :last_name, :birth_date, :street_address, :city, :postal_code, :country, :photo ])
   end
 end

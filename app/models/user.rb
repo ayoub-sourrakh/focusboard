@@ -13,7 +13,7 @@ class User < ApplicationRecord
   validates :birth_date, presence: true, on: :create
   validates :username, presence: true, uniqueness: { case_sensitive: false }, format: { with: /\A[a-z0-9._]+\z/, message: "only allows lowercase letters, numbers, dots and underscores" }
   validate :birth_date_cannot_be_in_the_future, if: :birth_date_changed?
-  
+
   # Callbacks
   before_validation :generate_username, on: :create, if: -> { username.blank? }
 
@@ -22,7 +22,7 @@ class User < ApplicationRecord
     if first_name.present? && last_name.present?
       "#{first_name} #{last_name}".strip
     else
-      email.split('@').first.capitalize
+      email.split("@").first.capitalize
     end
   end
 
@@ -42,16 +42,16 @@ class User < ApplicationRecord
       errors.add(:birth_date, "can't be in the future")
     end
   end
-  
+
   def generate_username
     if first_name.present? && last_name.present?
       # Generate username from first_name.last_name
-      base_username = "#{first_name}.#{last_name}".downcase.gsub(/[^a-z0-9._]/, '')
+      base_username = "#{first_name}.#{last_name}".downcase.gsub(/[^a-z0-9._]/, "")
     else
       # Generate random username
       base_username = "user#{SecureRandom.hex(4)}"
     end
-    
+
     # Ensure uniqueness
     username_candidate = base_username
     counter = 1
@@ -59,8 +59,7 @@ class User < ApplicationRecord
       username_candidate = "#{base_username}#{counter}"
       counter += 1
     end
-    
+
     self.username = username_candidate
   end
-  
 end
