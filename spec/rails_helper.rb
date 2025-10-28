@@ -22,7 +22,7 @@ end
 
 RSpec.configure do |config|
   # Paths for fixtures (if you still use any)
-  config.fixture_paths = [Rails.root.join('spec/fixtures')]
+  config.fixture_paths = [ Rails.root.join('spec/fixtures') ]
 
   # Use transactional fixtures by default
   config.use_transactional_fixtures = true
