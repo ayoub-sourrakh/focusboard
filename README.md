@@ -20,6 +20,8 @@ A modern task management application built with Ruby on Rails.
 
 ## Setup
 
+### Option 1: Local Development
+
 ```bash
 # Install dependencies
 bundle install
@@ -30,6 +32,20 @@ rails db:create db:migrate
 # Start server
 bin/dev
 ```
+
+### Option 2: Docker (Recommended)
+
+```bash
+# Build and start all services
+docker-compose up --build -d
+
+# Setup database
+docker-compose exec web rails db:create db:migrate
+
+# Open http://localhost:3000
+```
+
+See [DOCKER_SETUP.md](DOCKER_SETUP.md) for more details.
 
 ## Configuration
 
