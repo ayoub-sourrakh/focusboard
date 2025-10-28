@@ -1,0 +1,100 @@
+<div class="min-h-[calc(100vh-16rem)] py-12 px-4 sm:px-6 lg:px-8">
+  <div class="max-w-3xl mx-auto">
+    <!-- Header -->
+    <div class="text-center mb-8">
+      <h2 class="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-2"><%= t('edit_profile.title') %></h2>
+      <p class="text-gray-600 dark:text-gray-300"><%= t('edit_profile.subtitle') %></p>
+    </div>
+
+    <!-- Form Card -->
+    <div class="bg-white dark:bg-gray-800 rounded-2xl shadow-xl p-6 md:p-8 border border-gray-100 dark:border-gray-700 transition-colors duration-200">
+      <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put, class: "space-y-8", multipart: true }) do |f| %>
+        <%= render "devise/shared/error_messages", resource: resource %>
+
+        <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
+          <div class="text-sm text-amber-700 dark:text-amber-300 bg-amber-50 dark:bg-amber-900/20 p-4 rounded-xl border border-amber-200 dark:border-amber-800">
+            <strong><%= t('edit_profile.pending_confirmation') %>:</strong> <%= resource.unconfirmed_email %>
+          </div>
+        <% end %>
+
+        <!-- Profile Photo Section -->
+        <div class="border-b border-gray-200 dark:border-gray-700 pb-8" data-controller="photo-preview">
+          <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-4"><%= t('edit_profile.profile_photo') %></h3>
+          <div class="flex flex-col sm:flex-row items-center gap-6">
+            <div class="relative">
+              <% if resource.photo.attached? && resource.photo.persisted? %>
+                <%= image_tag resource.photo, class: "w-24 h-24 rounded-full object-cover border-4 border-blue-100", data: { photo_preview_target: "preview" } %>
+              <% end %>
+              <div class="w-24 h-24 rounded-full bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center text-white text-3xl font-bold border-4 border-blue-100 <%= 'hidden' if resource.photo.attached? && resource.photo.persisted? %>" data-photo-preview-target="placeholder">
+                <%= resource.initials %>
+              </div>
+            </div>
+            <div class="flex-1 text-center sm:text-left">
+              <%= f.label :photo, t('edit_profile.photo'), class: "block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2" %>
+              <%= f.file_field :photo, accept: "image/*", class: "block w-full text-sm text-gray-500 file:mr-4 file:py-2 file:px-4 file:rounded-lg file:border-0 file:text-sm file:font-semibold file:bg-blue-50 file:text-blue-700 hover:file:bg-blue-100 transition duration-200", data: { action: "change->photo-preview#preview", photo_preview_target: "input" } %>
+              <p class="text-xs text-gray-500 dark:text-gray-400 mt-2"><%= t('edit_profile.photo_hint') %></p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Personal Information -->
+        <div class="border-b border-gray-200 dark:border-gray-700 pb-8">
+          <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-4"><%= t('edit_profile.personal_info') %></h3>
+          <div class="space-y-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div>
+                <%= f.label :first_name, t('edit_profile.first_name'), class: "block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2" %>
+                <%= f.text_field :first_name, class: "w-full px-4 py-3 border border-gray-300 dark:border-gray-600 dark:bg-gray-700 dark:text-white rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent transition duration-200" %>
+              </div>
+              <div>
+                <%= f.label :last_name, t('edit_profile.last_name'), class: "block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2" %>
+                <%= f.text_field :last_name, class: "w-full px-4 py-3 border border-gray-300 dark:border-gray-600 dark:bg-gray-700 dark:text-white rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent transition duration-200" %>
+              </div>
+            </div>
+
+            <div>
+              <%= f.label :email, t('edit_profile.email'), class: "block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2" %>
+              <%= f.email_field :email, autocomplete: "email", class: "w-full px-4 py-3 border border-gray-300 dark:border-gray-600 dark:bg-gray-700 dark:text-white rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent transition duration-200" %>
+            </div>
+
+            <div>
+              <%= f.label :birth_date, t('edit_profile.birth_date'), class: "block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2" %>
+              <%= f.date_field :birth_date, class: "w-full px-4 py-3 border border-gray-300 dark:border-gray-600 dark:bg-gray-700 dark:text-white rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent transition duration-200" %>
+            </div>
+
+            <div>
+              <%= f.label :street_address, t('edit_profile.street_address'), class: "block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2" %>
+              <%= f.text_field :street_address, placeholder: t('edit_profile.street_address_placeholder'), class: "w-full px-4 py-3 border border-gray-300 dark:border-gray-600 dark:bg-gray-700 dark:text-white rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent transition duration-200" %>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div>
+                <%= f.label :city, t('edit_profile.city'), class: "block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2" %>
+                <%= f.text_field :city, placeholder: t('edit_profile.city_placeholder'), class: "w-full px-4 py-3 border border-gray-300 dark:border-gray-600 dark:bg-gray-700 dark:text-white rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent transition duration-200" %>
+              </div>
+              <div>
+                <%= f.label :postal_code, t('edit_profile.postal_code'), class: "block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2" %>
+                <%= f.text_field :postal_code, placeholder: t('edit_profile.postal_code_placeholder'), class: "w-full px-4 py-3 border border-gray-300 dark:border-gray-600 dark:bg-gray-700 dark:text-white rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent transition duration-200" %>
+              </div>
+            </div>
+            
+            <div>
+              <%= f.label :country, t('edit_profile.country'), class: "block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2" %>
+              <%= f.text_field :country, placeholder: t('edit_profile.country_placeholder'), class: "w-full px-4 py-3 border border-gray-300 dark:border-gray-600 dark:bg-gray-700 dark:text-white rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent transition duration-200" %>
+            </div>
+          </div>
+        </div>
+
+        <!-- Submit Button -->
+        <div>
+          <%= f.submit t('edit_profile.save_changes'), class: "w-full bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-semibold py-3 px-4 rounded-xl transition duration-200 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5" %>
+        </div>
+      <% end %>
+    </div>
+
+    <!-- Back Link -->
+    <div class="mt-6 text-center">
+      <%= link_to t('edit_profile.back_to_profile'), user_profile_path(current_user.username), class: "text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 font-medium transition duration-200" %>
+    </div>
+  </div>
+</div>

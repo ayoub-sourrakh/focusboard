@@ -1,0 +1,453 @@
+fr:
+  app_name: "Focusboard"
+  
+  # ActiveRecord errors
+  activerecord:
+    errors:
+      messages:
+        blank: "ne peut pas être vide"
+        too_short: "est trop court (minimum %{count} caractères)"
+        too_long: "est trop long (maximum %{count} caractères)"
+        invalid: "est invalide"
+        taken: "est déjà utilisé"
+        not_a_number: "n'est pas un nombre"
+        greater_than: "doit être supérieur à %{count}"
+        greater_than_or_equal_to: "doit être supérieur ou égal à %{count}"
+        less_than: "doit être inférieur à %{count}"
+        less_than_or_equal_to: "doit être inférieur ou égal à %{count}"
+        confirmation: "ne correspond pas à la confirmation"
+        accepted: "doit être accepté"
+        empty: "ne peut pas être vide"
+        present: "doit être vide"
+        required: "doit exister"
+        inclusion: "n'est pas inclus dans la liste"
+        exclusion: "est réservé"
+        wrong_length: "ne fait pas la bonne longueur (doit être de %{count} caractères)"
+      models:
+        user:
+          attributes:
+            email:
+              blank: "L'email ne peut pas être vide"
+              invalid: "L'email n'est pas valide"
+              taken: "Cet email est déjà utilisé"
+            password:
+              blank: "Le mot de passe ne peut pas être vide"
+              too_short: "Le mot de passe est trop court (minimum %{count} caractères)"
+            password_confirmation:
+              confirmation: "La confirmation du mot de passe ne correspond pas"
+            first_name:
+              blank: "Le prénom ne peut pas être vide"
+              too_short: "Le prénom est trop court (minimum %{count} caractères)"
+              too_long: "Le prénom est trop long (maximum %{count} caractères)"
+            last_name:
+              blank: "Le nom ne peut pas être vide"
+              too_short: "Le nom est trop court (minimum %{count} caractères)"
+              too_long: "Le nom est trop long (maximum %{count} caractères)"
+            birth_date:
+              blank: "La date de naissance ne peut pas être vide"
+              invalid: "La date de naissance n'est pas valide"
+            username:
+              blank: "Le nom d'utilisateur ne peut pas être vide"
+              taken: "Ce nom d'utilisateur est déjà utilisé"
+              invalid: "Le nom d'utilisateur ne peut contenir que des lettres minuscules, chiffres, points et underscores"
+            current_password:
+              blank: "Le mot de passe actuel ne peut pas être vide"
+              invalid: "Le mot de passe actuel est incorrect"
+    attributes:
+      user:
+        email: "Email"
+        password: "Mot de passe"
+        password_confirmation: "Confirmation du mot de passe"
+        current_password: "Mot de passe actuel"
+        first_name: "Prénom"
+        last_name: "Nom"
+        birth_date: "Date de naissance"
+        address: "Adresse"
+        username: "Nom d'utilisateur"
+        photo: "Photo"
+    models:
+      user: "Utilisateur"
+  
+  # Navigation
+  nav:
+    home: "Accueil"
+    features: "Fonctionnalités"
+    about: "À propos"
+    sign_in: "Se connecter"
+    sign_up: "S'inscrire"
+    sign_out: "Se déconnecter"
+    view_profile: "Voir le profil"
+    edit_profile: "Modifier le profil"
+    settings: "Paramètres"
+  
+  # Home page
+  home:
+    welcome_back: "Bon retour, %{name} ! 👋"
+    ready_productivity: "Prêt à booster votre productivité aujourd'hui ?"
+    hero_title: "Restez concentré, accomplissez vos tâches"
+    hero_subtitle: "Focusboard vous aide à organiser vos tâches, collaborer avec votre équipe et atteindre vos objectifs facilement."
+    get_started: "Commencer gratuitement"
+    stats:
+      total_tasks: "Tâches totales"
+      completed: "Terminées"
+      in_progress: "En cours"
+    quick_actions: "Actions rapides"
+    actions:
+      new_task: "Nouvelle tâche"
+      new_board: "Nouveau tableau"
+      invite_team: "Inviter l'équipe"
+      view_reports: "Voir les rapports"
+    recent_activity: "Activité récente"
+    no_activity: "Pas d'activité récente"
+    start_creating: "Commencez à créer des tâches pour voir votre activité ici"
+    features:
+      task_management:
+        title: "Gestion des tâches"
+        description: "Organisez votre travail avec des tableaux et listes puissants. Suivez les progrès et ne manquez jamais une échéance."
+      team_collaboration:
+        title: "Collaboration d'équipe"
+        description: "Travaillez ensemble de manière transparente. Partagez des tableaux, assignez des tâches et gardez tout le monde synchronisé."
+      analytics:
+        title: "Analyses et insights"
+        description: "Suivez votre productivité avec des rapports détaillés et des insights. Prenez des décisions basées sur les données."
+    cta:
+      title: "Prêt à booster votre productivité ?"
+      subtitle: "Rejoignez des milliers d'utilisateurs qui accomplissent déjà plus avec Focusboard."
+      button: "Commencer aujourd'hui"
+  
+  # Authentication
+  auth:
+    sign_in:
+      title: "Bon retour"
+      subtitle: "Connectez-vous pour continuer sur Focusboard"
+      email: "Email"
+      password: "Mot de passe"
+      remember_me: "Se souvenir de moi"
+      forgot_password: "Mot de passe oublié ?"
+      submit: "Se connecter"
+      security_note: "Protégé par un chiffrement standard de l'industrie"
+    sign_up:
+      title: "Créez votre compte"
+      subtitle: "Rejoignez Focusboard et commencez à être productif"
+      first_name: "Prénom"
+      last_name: "Nom"
+      email: "Email"
+      birth_date: "Date de naissance"
+      street_address: "Adresse"
+      street_address_placeholder: "123 Rue Principale"
+      city: "Ville"
+      city_placeholder: "Paris"
+      postal_code: "Code postal"
+      postal_code_placeholder: "75001"
+      country: "Pays"
+      country_placeholder: "France"
+      password: "Mot de passe"
+      password_confirmation: "Confirmer le mot de passe"
+      chars_min: "caractères min"
+      submit: "Créer un compte"
+      terms_note: "En vous inscrivant, vous acceptez nos Conditions d'utilisation et notre Politique de confidentialité"
+    forgot_password:
+      title: "Mot de passe oublié ?"
+      subtitle: "Pas de souci ! Entrez votre email et nous vous enverrons les instructions de réinitialisation"
+      email: "Email"
+      submit: "Envoyer les instructions"
+      remember: "Vous vous souvenez de votre mot de passe ?"
+    reset_password:
+      title: "Changer le mot de passe"
+      subtitle: "Entrez votre nouveau mot de passe ci-dessous"
+      new_password: "Nouveau mot de passe"
+      confirm_password: "Confirmer le nouveau mot de passe"
+      submit: "Changer le mot de passe"
+      security_note: "Assurez-vous d'utiliser un mot de passe fort et unique"
+    edit_profile:
+      title: "Modifier le profil"
+      subtitle: "Mettez à jour vos informations personnelles et paramètres"
+      profile_photo: "Photo de profil"
+      upload_photo: "Photo"
+      photo_hint: "JPG, PNG ou GIF (MAX. 5MB)"
+      personal_info: "Informations personnelles"
+      contact_location: "Contact et localisation"
+      change_password: "Changer le mot de passe"
+      password_hint: "Laissez vide si vous ne voulez pas le changer"
+      current_password: "Mot de passe actuel"
+      current_password_hint: "Nous avons besoin de votre mot de passe actuel pour confirmer les changements"
+      save_changes: "Enregistrer les modifications"
+      danger_zone: "Zone dangereuse"
+      danger_warning: "Une fois que vous supprimez votre compte, il n'y a pas de retour en arrière. Soyez certain."
+      delete_account: "Supprimer le compte"
+      back_to_dashboard: "← Retour au tableau de bord"
+  
+  # Profile page
+  profile:
+    edit_profile: "Modifier le profil"
+    personal_info: "Informations personnelles"
+    full_name: "Nom complet"
+    email_address: "Adresse email"
+    date_of_birth: "Date de naissance"
+    not_provided: "Non fourni"
+    contact_location: "Contact et localisation"
+    address: "Adresse"
+    no_address: "Aucune adresse fournie"
+    account_activity: "Activité du compte"
+    total_tasks: "Tâches totales"
+    completed: "Terminées"
+    in_progress: "En cours"
+    days_active: "Jours actifs"
+    account_details: "Détails du compte"
+    member_since: "Membre depuis"
+    last_updated: "Dernière mise à jour"
+  
+  # Home page stats and sections
+  home_stats:
+    total_tasks: "Tâches totales"
+    completed: "Terminées"
+    in_progress: "En cours"
+    quick_actions: "Actions rapides"
+    new_task: "Nouvelle tâche"
+    new_board: "Nouveau tableau"
+    invite_team: "Inviter l'équipe"
+    view_reports: "Voir les rapports"
+    recent_activity: "Activité récente"
+    no_activity: "Pas d'activité récente"
+    start_creating: "Commencez à créer des tâches pour voir votre activité ici"
+  
+  # Features section
+  features:
+    task_management:
+      title: "Gestion des tâches"
+      description: "Organisez votre travail avec des tableaux et listes puissants. Suivez les progrès et ne manquez jamais une échéance."
+    team_collaboration:
+      title: "Collaboration d'équipe"
+      description: "Travaillez ensemble de manière transparente. Partagez des tableaux, assignez des tâches et gardez tout le monde synchronisé."
+    analytics:
+      title: "Analyses et insights"
+      description: "Suivez votre productivité avec des rapports détaillés et des insights. Prenez des décisions basées sur les données."
+  
+  # CTA section
+  cta:
+    title: "Prêt à booster votre productivité ?"
+    subtitle: "Rejoignez des milliers d'utilisateurs qui accomplissent déjà plus avec Focusboard."
+    button: "Commencer aujourd'hui"
+  
+  # Footer
+  footer:
+    product: "Produit"
+    features: "Fonctionnalités"
+    pricing: "Tarifs"
+    roadmap: "Feuille de route"
+    changelog: "Journal des modifications"
+    company: "Entreprise"
+    about: "À propos"
+    blog: "Blog"
+    careers: "Carrières"
+    contact: "Contact"
+    support: "Support"
+    help_center: "Centre d'aide"
+    documentation: "Documentation"
+    privacy_policy: "Politique de confidentialité"
+    terms_of_service: "Conditions d'utilisation"
+    tagline: "Votre compagnon de productivité pour rester concentré et organisé."
+    rights_reserved: "Tous droits réservés."
+    made_with_love: "Fait avec"
+    by_team: "par l'équipe Focusboard"
+    select_language: "Sélectionner la langue"
+  
+  # Edit profile page
+  edit_profile:
+    title: "Modifier le profil"
+    subtitle: "Mettez à jour vos informations personnelles et paramètres"
+    pending_confirmation: "En attente de confirmation"
+    profile_photo: "Photo de profil"
+    photo: "Photo"
+    photo_hint: "JPG, PNG ou GIF (MAX. 5MB)"
+    personal_info: "Informations personnelles"
+    first_name: "Prénom"
+    last_name: "Nom"
+    email: "Email"
+    birth_date: "Date de naissance"
+    street_address: "Adresse"
+    street_address_placeholder: "123 Rue Principale"
+    city: "Ville"
+    city_placeholder: "Paris"
+    postal_code: "Code postal"
+    postal_code_placeholder: "75001"
+    country: "Pays"
+    country_placeholder: "France"
+    contact_location: "Contact et localisation"
+    change_password: "Changer le mot de passe"
+    password_hint: "Laissez vide si vous ne voulez pas le changer"
+    new_password: "Nouveau mot de passe"
+    confirm_password: "Confirmer le nouveau mot de passe"
+    current_password: "Mot de passe actuel"
+    current_password_hint: "Nous avons besoin de votre mot de passe actuel pour confirmer les changements"
+    chars_min: "caractères min"
+    save_changes: "Enregistrer les modifications"
+    back_to_profile: "← Retour au profil"
+  
+  # Password reset pages
+  password:
+    forgot:
+      title: "Mot de passe oublié ?"
+      subtitle: "Pas de souci ! Entrez votre email et nous vous enverrons les instructions de réinitialisation"
+      email: "Email"
+      submit: "Envoyer les instructions"
+      remember: "Vous vous souvenez de votre mot de passe ?"
+    reset:
+      title: "Changer le mot de passe"
+      subtitle: "Entrez votre nouveau mot de passe ci-dessous"
+      new_password: "Nouveau mot de passe"
+      confirm_password: "Confirmer le nouveau mot de passe"
+      submit: "Changer le mot de passe"
+      security_note: "Assurez-vous d'utiliser un mot de passe fort et unique"
+  
+  # Settings page
+  settings:
+    title: "Paramètres"
+    subtitle: "Gérez votre mot de passe et les paramètres de votre compte"
+    dark_mode:
+      title: "Mode Sombre"
+      description: "Activez le mode sombre pour réduire la fatigue oculaire"
+      enable: "Activer le mode sombre"
+      disable: "Désactiver le mode sombre"
+      toggled: "Mode d'affichage modifié avec succès"
+    change_password:
+      title: "Changer le mot de passe"
+      description: "Mettez à jour votre mot de passe pour sécuriser votre compte"
+      current_password: "Mot de passe actuel"
+      current_password_placeholder: "Entrez votre mot de passe actuel"
+      new_password: "Nouveau mot de passe"
+      new_password_placeholder: "Entrez votre nouveau mot de passe"
+      confirm_password: "Confirmer le nouveau mot de passe"
+      confirm_password_placeholder: "Confirmez votre nouveau mot de passe"
+      password_hint: "Minimum %{count} caractères"
+      submit: "Mettre à jour le mot de passe"
+    danger_zone:
+      title: "Zone dangereuse"
+      description: "Une fois que vous supprimez votre compte, il n'y a pas de retour en arrière. Toutes vos données seront définitivement supprimées."
+      delete_account: "Supprimer mon compte"
+      confirm_message: "Êtes-vous absolument sûr ? Cette action est irréversible et toutes vos données seront définitivement supprimées."
+    back_to_profile: "← Retour au profil"
+  
+  # Common
+  common:
+    optional: "Optionnel"
+    required: "Requis"
+    save: "Enregistrer"
+    cancel: "Annuler"
+    delete: "Supprimer"
+    edit: "Modifier"
+    back: "Retour"
+    loading: "Chargement..."
+    error: "Erreur"
+    success: "Succès"
+  
+  # Error messages
+  errors:
+    format: "%{attribute} %{message}"
+    template:
+      header:
+        one: "1 erreur a empêché l'enregistrement de ce %{model}"
+        other: "%{count} erreurs ont empêché l'enregistrement de ce %{model}"
+      body: "Veuillez vérifier les champs suivants :"
+    prevented_saving: "erreur a empêché l'enregistrement :"
+    prevented_saving_plural: "erreurs ont empêché l'enregistrement :"
+    messages:
+      blank: "ne peut pas être vide"
+      too_short: "est trop court (minimum %{count} caractères)"
+      too_long: "est trop long (maximum %{count} caractères)"
+      invalid: "est invalide"
+      taken: "est déjà utilisé"
+      confirmation: "ne correspond pas à la confirmation"
+    attributes:
+      email:
+        blank: "L'email ne peut pas être vide"
+        invalid: "L'email n'est pas valide"
+      password:
+        blank: "Le mot de passe ne peut pas être vide"
+        too_short: "Le mot de passe est trop court"
+      first_name:
+        blank: "Le prénom ne peut pas être vide"
+        too_short: "Le prénom est trop court"
+      last_name:
+        blank: "Le nom ne peut pas être vide"
+        too_short: "Le nom est trop court"
+      birth_date:
+        blank: "La date de naissance ne peut pas être vide"
+  
+  # Date and time formats
+  date:
+    formats:
+      default: "%d/%m/%Y"
+      short: "%d %b"
+      long: "%d %B %Y"
+    day_names: [dimanche, lundi, mardi, mercredi, jeudi, vendredi, samedi]
+    abbr_day_names: [dim, lun, mar, mer, jeu, ven, sam]
+    month_names: [~, janvier, février, mars, avril, mai, juin, juillet, août, septembre, octobre, novembre, décembre]
+    abbr_month_names: [~, jan, fév, mar, avr, mai, juin, juil, août, sep, oct, nov, déc]
+  
+  time:
+    formats:
+      default: "%d %B %Y %H:%M"
+      short: "%d %b %H:%M"
+      long: "%A %d %B %Y à %H:%M"
+    am: "am"
+    pm: "pm"
+  
+  # Devise translations
+  devise:
+    sessions:
+      signed_in: "Connexion réussie."
+      signed_out: "Déconnexion réussie."
+      already_signed_out: "Déconnexion réussie."
+      user:
+        signed_in: "Connexion réussie."
+    passwords:
+      send_instructions: "Vous allez recevoir un email avec les instructions pour réinitialiser votre mot de passe."
+      updated: "Votre mot de passe a été modifié avec succès."
+      updated_not_active: "Votre mot de passe a été modifié avec succès."
+      send_paranoid_instructions: "Si votre email existe dans notre base de données, vous recevrez un lien de réinitialisation."
+    registrations:
+      signed_up: "Bienvenue ! Votre inscription a été enregistrée."
+      signed_up_but_inactive: "Votre inscription a été enregistrée. Cependant, vous ne pouvez pas vous connecter car votre compte n'est pas encore activé."
+      signed_up_but_locked: "Votre inscription a été enregistrée. Cependant, vous ne pouvez pas vous connecter car votre compte est verrouillé."
+      signed_up_but_unconfirmed: "Un message avec un lien de confirmation vous a été envoyé par email."
+      update_needs_confirmation: "Votre compte a été mis à jour mais nous devons vérifier votre nouvelle adresse email."
+      updated: "Votre compte a été modifié avec succès."
+      destroyed: "Au revoir ! Votre compte a été supprimé avec succès."
+    unlocks:
+      send_instructions: "Vous allez recevoir un email avec les instructions pour déverrouiller votre compte."
+      send_paranoid_instructions: "Si votre compte existe, vous recevrez un email avec les instructions pour le déverrouiller."
+      unlocked: "Votre compte a été déverrouillé avec succès."
+    omniauth_callbacks:
+      success: "Authentifié avec succès depuis %{kind}."
+      failure: "Nous ne pouvons pas vous authentifier depuis %{kind} : %{reason}."
+    mailer:
+      confirmation_instructions:
+        subject: "Instructions de confirmation"
+      reset_password_instructions:
+        subject: "Instructions de réinitialisation du mot de passe"
+      unlock_instructions:
+        subject: "Instructions de déverrouillage"
+      email_changed:
+        subject: "Email modifié"
+      password_change:
+        subject: "Mot de passe modifié"
+    failure:
+      already_authenticated: "Vous êtes déjà connecté."
+      inactive: "Votre compte n'est pas encore activé."
+      invalid: "Email ou mot de passe incorrect."
+      locked: "Votre compte est verrouillé."
+      last_attempt: "Il vous reste une tentative avant que votre compte ne soit verrouillé."
+      not_found_in_database: "Email ou mot de passe incorrect."
+      timeout: "Votre session a expiré, veuillez vous reconnecter."
+      unauthenticated: "Vous devez vous connecter ou vous inscrire pour continuer."
+      unconfirmed: "Vous devez confirmer votre compte pour continuer."
+  
+  # Shared links
+  links:
+    sign_in: "Se connecter"
+    sign_up: "S'inscrire"
+    forgot_password: "Mot de passe oublié ?"
+    didnt_receive_confirmation: "Vous n'avez pas reçu l'email de confirmation ?"
+    didnt_receive_unlock: "Vous n'avez pas reçu l'email de déverrouillage ?"
+    sign_in_with: "Se connecter avec %{provider}"

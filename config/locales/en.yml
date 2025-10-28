@@ -1,0 +1,404 @@
+# Files in the config/locales directory are used for internationalization and
+# are automatically loaded by Rails. If you want to use locales other than
+# English, add the necessary files in this directory.
+#
+# To use the locales, use `I18n.t`:
+#
+#     I18n.t "hello"
+#
+# In views, this is aliased to just `t`:
+#
+#     <%= t("hello") %>
+#
+# To use a different locale, set it with `I18n.locale`:
+#
+#     I18n.locale = :es
+#
+# This would use the information in config/locales/es.yml.
+#
+# To learn more about the API, please read the Rails Internationalization guide
+# at https://guides.rubyonrails.org/i18n.html.
+#
+# Be aware that YAML interprets the following case-insensitive strings as
+# booleans: `true`, `false`, `on`, `off`, `yes`, `no`. Therefore, these strings
+# must be quoted to be interpreted as strings. For example:
+#
+#     en:
+#       "yes": yup
+#       enabled: "ON"
+
+en:
+  app_name: "Focusboard"
+  
+  # ActiveRecord errors
+  activerecord:
+    errors:
+      messages:
+        blank: "can't be blank"
+        too_short: "is too short (minimum %{count} characters)"
+        too_long: "is too long (maximum %{count} characters)"
+        invalid: "is invalid"
+        taken: "has already been taken"
+        not_a_number: "is not a number"
+        greater_than: "must be greater than %{count}"
+        greater_than_or_equal_to: "must be greater than or equal to %{count}"
+        less_than: "must be less than %{count}"
+        less_than_or_equal_to: "must be less than or equal to %{count}"
+        confirmation: "doesn't match confirmation"
+        accepted: "must be accepted"
+        empty: "can't be empty"
+        present: "must be blank"
+        required: "must exist"
+        inclusion: "is not included in the list"
+        exclusion: "is reserved"
+        wrong_length: "is the wrong length (should be %{count} characters)"
+      models:
+        user:
+          attributes:
+            email:
+              blank: "Email can't be blank"
+              invalid: "Email is invalid"
+              taken: "This email is already in use"
+            password:
+              blank: "Password can't be blank"
+              too_short: "Password is too short (minimum %{count} characters)"
+            password_confirmation:
+              confirmation: "Password confirmation doesn't match"
+            first_name:
+              blank: "First name can't be blank"
+              too_short: "First name is too short (minimum %{count} characters)"
+              too_long: "First name is too long (maximum %{count} characters)"
+            last_name:
+              blank: "Last name can't be blank"
+              too_short: "Last name is too short (minimum %{count} characters)"
+              too_long: "Last name is too long (maximum %{count} characters)"
+            birth_date:
+              blank: "Birth date can't be blank"
+              invalid: "Birth date is invalid"
+            username:
+              blank: "Username can't be blank"
+              taken: "This username is already taken"
+              invalid: "Username can only contain lowercase letters, numbers, dots and underscores"
+            current_password:
+              blank: "Current password can't be blank"
+              invalid: "Current password is incorrect"
+    attributes:
+      user:
+        email: "Email"
+        password: "Password"
+        password_confirmation: "Password confirmation"
+        current_password: "Current password"
+        first_name: "First name"
+        last_name: "Last name"
+        birth_date: "Birth date"
+        address: "Address"
+        username: "Username"
+        photo: "Photo"
+    models:
+      user: "User"
+  
+  nav:
+    home: "Home"
+    features: "Features"
+    about: "About"
+    sign_in: "Sign In"
+    sign_up: "Sign Up"
+    sign_out: "Sign Out"
+    view_profile: "View Profile"
+    edit_profile: "Edit Profile"
+    settings: "Settings"
+  
+  home:
+    welcome_back: "Welcome back, %{name}! 👋"
+    ready_productivity: "Ready to boost your productivity today?"
+    hero_title: "Stay Focused, Get Things Done"
+    hero_subtitle: "Focusboard helps you organize your tasks, collaborate with your team, and achieve your goals with ease."
+    get_started: "Get Started Free"
+  
+  auth:
+    sign_in:
+      title: "Welcome Back"
+      subtitle: "Sign in to continue to Focusboard"
+      email: "Email"
+      password: "Password"
+      remember_me: "Remember me"
+      forgot_password: "Forgot password?"
+      submit: "Sign In"
+      security_note: "Protected by industry-standard encryption"
+    sign_up:
+      title: "Create Your Account"
+      subtitle: "Join Focusboard and start being productive"
+      first_name: "First Name"
+      last_name: "Last Name"
+      email: "Email"
+      birth_date: "Date of Birth"
+      street_address: "Street Address"
+      street_address_placeholder: "123 Main St"
+      city: "City"
+      city_placeholder: "New York"
+      postal_code: "Postal Code"
+      postal_code_placeholder: "10001"
+      country: "Country"
+      country_placeholder: "United States"
+      password: "Password"
+      password_confirmation: "Confirm Password"
+      chars_min: "chars min"
+      submit: "Create Account"
+      terms_note: "By signing up, you agree to our Terms of Service and Privacy Policy"
+  
+  profile:
+    edit_profile: "Edit Profile"
+    personal_info: "Personal Information"
+    full_name: "Full Name"
+    email_address: "Email Address"
+    date_of_birth: "Date of Birth"
+    not_provided: "Not provided"
+    contact_location: "Contact & Location"
+    address: "Address"
+    no_address: "No address provided"
+    account_activity: "Account Activity"
+    total_tasks: "Total Tasks"
+    completed: "Completed"
+    in_progress: "In Progress"
+    days_active: "Days Active"
+    account_details: "Account Details"
+    member_since: "Member Since"
+    last_updated: "Last Updated"
+  
+  home_stats:
+    total_tasks: "Total Tasks"
+    completed: "Completed"
+    in_progress: "In Progress"
+    quick_actions: "Quick Actions"
+    new_task: "New Task"
+    new_board: "New Board"
+    invite_team: "Invite Team"
+    view_reports: "View Reports"
+    recent_activity: "Recent Activity"
+    no_activity: "No recent activity"
+    start_creating: "Start creating tasks to see your activity here"
+  
+  features:
+    task_management:
+      title: "Task Management"
+      description: "Organize your work with powerful boards and lists. Track progress and never miss a deadline."
+    team_collaboration:
+      title: "Team Collaboration"
+      description: "Work together seamlessly. Share boards, assign tasks, and keep everyone in sync."
+    analytics:
+      title: "Analytics & Insights"
+      description: "Track your productivity with detailed reports and insights. Make data-driven decisions."
+  
+  cta:
+    title: "Ready to boost your productivity?"
+    subtitle: "Join thousands of users who are already getting more done with Focusboard."
+    button: "Get Started Today"
+  
+  footer:
+    product: "Product"
+    features: "Features"
+    pricing: "Pricing"
+    roadmap: "Roadmap"
+    changelog: "Changelog"
+    company: "Company"
+    about: "About"
+    blog: "Blog"
+    careers: "Careers"
+    contact: "Contact"
+    support: "Support"
+    help_center: "Help Center"
+    documentation: "Documentation"
+    privacy_policy: "Privacy Policy"
+    terms_of_service: "Terms of Service"
+    tagline: "Your productivity companion for staying focused and organized."
+    rights_reserved: "All rights reserved."
+    made_with_love: "Made with"
+    by_team: "by the Focusboard Team"
+    select_language: "Select Language"
+  
+  edit_profile:
+    title: "Edit Profile"
+    subtitle: "Update your personal information and settings"
+    profile_photo: "Profile Photo"
+    photo: "Photo"
+    photo_hint: "JPG, PNG or GIF (MAX. 5MB)"
+    personal_info: "Personal Information"
+    first_name: "First Name"
+    last_name: "Last Name"
+    email: "Email"
+    birth_date: "Date of Birth"
+    street_address: "Street Address"
+    street_address_placeholder: "123 Main St"
+    city: "City"
+    city_placeholder: "New York"
+    postal_code: "Postal Code"
+    postal_code_placeholder: "10001"
+    country: "Country"
+    country_placeholder: "United States"
+    contact_location: "Contact & Location"
+    save_changes: "Save Changes"
+    back_to_profile: "← Back to Profile"
+  
+  settings:
+    title: "Settings"
+    subtitle: "Manage your password and account settings"
+    dark_mode:
+      title: "Dark Mode"
+      description: "Enable dark mode to reduce eye strain"
+      enable: "Enable Dark Mode"
+      disable: "Disable Dark Mode"
+      toggled: "Display mode changed successfully"
+    change_password:
+      title: "Change Password"
+      description: "Update your password to keep your account secure"
+      current_password: "Current Password"
+      current_password_placeholder: "Enter your current password"
+      new_password: "New Password"
+      new_password_placeholder: "Enter your new password"
+      confirm_password: "Confirm New Password"
+      confirm_password_placeholder: "Confirm your new password"
+      password_hint: "Minimum %{count} characters"
+      submit: "Update Password"
+    danger_zone:
+      title: "Danger Zone"
+      description: "Once you delete your account, there is no going back. All your data will be permanently deleted."
+      delete_account: "Delete My Account"
+      confirm_message: "Are you absolutely sure? This action is irreversible and all your data will be permanently deleted."
+    back_to_profile: "← Back to Profile"
+  
+  password:
+    forgot:
+      title: "Forgot Password?"
+      subtitle: "No worries! Enter your email and we'll send you reset instructions"
+      email: "Email"
+      submit: "Send Reset Instructions"
+      remember: "Remember your password?"
+    reset:
+      title: "Change Password"
+      subtitle: "Enter your new password below"
+      new_password: "New Password"
+      confirm_password: "Confirm New Password"
+      submit: "Change Password"
+      security_note: "Make sure to use a strong, unique password"
+  
+  common:
+    optional: "Optional"
+    required: "Required"
+    save: "Save"
+    cancel: "Cancel"
+    delete: "Delete"
+    edit: "Edit"
+    back: "Back"
+    loading: "Loading..."
+    error: "Error"
+    success: "Success"
+  
+  errors:
+    format: "%{attribute} %{message}"
+    template:
+      header:
+        one: "1 error prohibited this %{model} from being saved"
+        other: "%{count} errors prohibited this %{model} from being saved"
+      body: "There were problems with the following fields:"
+    prevented_saving: "error prevented this from being saved:"
+    prevented_saving_plural: "errors prevented this from being saved:"
+    messages:
+      blank: "can't be blank"
+      too_short: "is too short (minimum %{count} characters)"
+      too_long: "is too long (maximum %{count} characters)"
+      invalid: "is invalid"
+      taken: "has already been taken"
+      confirmation: "doesn't match confirmation"
+    attributes:
+      email:
+        blank: "Email can't be blank"
+        invalid: "Email is invalid"
+      password:
+        blank: "Password can't be blank"
+        too_short: "Password is too short"
+      first_name:
+        blank: "First name can't be blank"
+        too_short: "First name is too short"
+      last_name:
+        blank: "Last name can't be blank"
+        too_short: "Last name is too short"
+      birth_date:
+        blank: "Birth date can't be blank"
+  
+  # Date and time formats
+  date:
+    formats:
+      default: "%m/%d/%Y"
+      short: "%b %d"
+      long: "%B %d, %Y"
+    day_names: [Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday]
+    abbr_day_names: [Sun, Mon, Tue, Wed, Thu, Fri, Sat]
+    month_names: [~, January, February, March, April, May, June, July, August, September, October, November, December]
+    abbr_month_names: [~, Jan, Feb, Mar, Apr, May, Jun, Jul, Aug, Sep, Oct, Nov, Dec]
+  
+  time:
+    formats:
+      default: "%B %d, %Y %H:%M"
+      short: "%b %d %H:%M"
+      long: "%A, %B %d, %Y at %H:%M"
+    am: "am"
+    pm: "pm"
+  
+  # Devise translations
+  devise:
+    sessions:
+      signed_in: "Signed in successfully."
+      signed_out: "Signed out successfully."
+      already_signed_out: "Signed out successfully."
+      user:
+        signed_in: "Signed in successfully."
+    passwords:
+      send_instructions: "You will receive an email with instructions on how to reset your password."
+      updated: "Your password has been changed successfully."
+      updated_not_active: "Your password has been changed successfully."
+      send_paranoid_instructions: "If your email exists in our database, you will receive a password recovery link."
+    registrations:
+      signed_up: "Welcome! You have signed up successfully."
+      signed_up_but_inactive: "You have signed up successfully. However, you cannot sign in because your account is not yet activated."
+      signed_up_but_locked: "You have signed up successfully. However, you cannot sign in because your account is locked."
+      signed_up_but_unconfirmed: "A message with a confirmation link has been sent to your email address."
+      update_needs_confirmation: "Your account has been updated but we need to verify your new email address."
+      updated: "Your account has been updated successfully."
+      destroyed: "Goodbye! Your account has been successfully deleted."
+    unlocks:
+      send_instructions: "You will receive an email with instructions on how to unlock your account."
+      send_paranoid_instructions: "If your account exists, you will receive an email with instructions on how to unlock it."
+      unlocked: "Your account has been unlocked successfully."
+    omniauth_callbacks:
+      success: "Successfully authenticated from %{kind}."
+      failure: "Could not authenticate you from %{kind}: %{reason}."
+    mailer:
+      confirmation_instructions:
+        subject: "Confirmation instructions"
+      reset_password_instructions:
+        subject: "Reset password instructions"
+      unlock_instructions:
+        subject: "Unlock instructions"
+      email_changed:
+        subject: "Email changed"
+      password_change:
+        subject: "Password changed"
+    failure:
+      already_authenticated: "You are already signed in."
+      inactive: "Your account is not activated yet."
+      invalid: "Invalid email or password."
+      locked: "Your account is locked."
+      last_attempt: "You have one more attempt before your account is locked."
+      not_found_in_database: "Invalid email or password."
+      timeout: "Your session expired. Please sign in again to continue."
+      unauthenticated: "You need to sign in or sign up before continuing."
+      unconfirmed: "You have to confirm your account before continuing."
+  
+  # Shared links
+  links:
+    sign_in: "Sign in"
+    sign_up: "Sign up"
+    forgot_password: "Forgot your password?"
+    didnt_receive_confirmation: "Didn't receive confirmation instructions?"
+    didnt_receive_unlock: "Didn't receive unlock instructions?"
+    sign_in_with: "Sign in with %{provider}"

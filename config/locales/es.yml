@@ -1,0 +1,375 @@
+es:
+  app_name: "Focusboard"
+  
+  # ActiveRecord errors
+  activerecord:
+    errors:
+      messages:
+        blank: "no puede estar vacío"
+        too_short: "es demasiado corto (mínimo %{count} caracteres)"
+        too_long: "es demasiado largo (máximo %{count} caracteres)"
+        invalid: "es inválido"
+        taken: "ya está en uso"
+        not_a_number: "no es un número"
+        greater_than: "debe ser mayor que %{count}"
+        greater_than_or_equal_to: "debe ser mayor o igual a %{count}"
+        less_than: "debe ser menor que %{count}"
+        less_than_or_equal_to: "debe ser menor o igual a %{count}"
+        confirmation: "no coincide con la confirmación"
+        accepted: "debe ser aceptado"
+        empty: "no puede estar vacío"
+        present: "debe estar vacío"
+        required: "debe existir"
+        inclusion: "no está incluido en la lista"
+        exclusion: "está reservado"
+        wrong_length: "no tiene la longitud correcta (debe tener %{count} caracteres)"
+      models:
+        user:
+          attributes:
+            email:
+              blank: "El correo electrónico no puede estar vacío"
+              invalid: "El correo electrónico no es válido"
+              taken: "Este correo electrónico ya está en uso"
+            password:
+              blank: "La contraseña no puede estar vacía"
+              too_short: "La contraseña es demasiado corta (mínimo %{count} caracteres)"
+            password_confirmation:
+              confirmation: "La confirmación de contraseña no coincide"
+            first_name:
+              blank: "El nombre no puede estar vacío"
+              too_short: "El nombre es demasiado corto (mínimo %{count} caracteres)"
+              too_long: "El nombre es demasiado largo (máximo %{count} caracteres)"
+            last_name:
+              blank: "El apellido no puede estar vacío"
+              too_short: "El apellido es demasiado corto (mínimo %{count} caracteres)"
+              too_long: "El apellido es demasiado largo (máximo %{count} caracteres)"
+            birth_date:
+              blank: "La fecha de nacimiento no puede estar vacía"
+              invalid: "La fecha de nacimiento no es válida"
+            username:
+              blank: "El nombre de usuario no puede estar vacío"
+              taken: "Este nombre de usuario ya está en uso"
+              invalid: "El nombre de usuario solo puede contener letras minúsculas, números, puntos y guiones bajos"
+            current_password:
+              blank: "La contraseña actual no puede estar vacía"
+              invalid: "La contraseña actual es incorrecta"
+    attributes:
+      user:
+        email: "Correo electrónico"
+        password: "Contraseña"
+        password_confirmation: "Confirmación de contraseña"
+        current_password: "Contraseña actual"
+        first_name: "Nombre"
+        last_name: "Apellido"
+        birth_date: "Fecha de nacimiento"
+        address: "Dirección"
+        username: "Nombre de usuario"
+        photo: "Foto"
+    models:
+      user: "Usuario"
+  
+  nav:
+    home: "Inicio"
+    features: "Características"
+    about: "Acerca de"
+    sign_in: "Iniciar sesión"
+    sign_up: "Registrarse"
+    sign_out: "Cerrar sesión"
+    view_profile: "Ver perfil"
+    edit_profile: "Editar perfil"
+    settings: "Configuración"
+  
+  home:
+    welcome_back: "¡Bienvenido de nuevo, %{name}! 👋"
+    ready_productivity: "¿Listo para aumentar tu productividad hoy?"
+    hero_title: "Mantente enfocado, haz las cosas"
+    hero_subtitle: "Focusboard te ayuda a organizar tus tareas, colaborar con tu equipo y alcanzar tus objetivos con facilidad."
+    get_started: "Comenzar gratis"
+  
+  auth:
+    sign_in:
+      title: "Bienvenido de nuevo"
+      subtitle: "Inicia sesión para continuar en Focusboard"
+      email: "Correo electrónico"
+      password: "Contraseña"
+      remember_me: "Recuérdame"
+      forgot_password: "¿Olvidaste tu contraseña?"
+      submit: "Iniciar sesión"
+      security_note: "Protegido por cifrado estándar de la industria"
+    sign_up:
+      title: "Crea tu cuenta"
+      subtitle: "Únete a Focusboard y comienza a ser productivo"
+      first_name: "Nombre"
+      last_name: "Apellido"
+      email: "Correo electrónico"
+      birth_date: "Fecha de nacimiento"
+      street_address: "Dirección"
+      street_address_placeholder: "Calle Principal 123"
+      city: "Ciudad"
+      city_placeholder: "Madrid"
+      postal_code: "Código Postal"
+      postal_code_placeholder: "28001"
+      country: "País"
+      country_placeholder: "España"
+      password: "Contraseña"
+      password_confirmation: "Confirmar contraseña"
+      chars_min: "caracteres mín"
+      submit: "Crear cuenta"
+      terms_note: "Al registrarte, aceptas nuestros Términos de Servicio y Política de Privacidad"
+  
+  profile:
+    edit_profile: "Editar perfil"
+    personal_info: "Información personal"
+    full_name: "Nombre completo"
+    email_address: "Dirección de correo"
+    date_of_birth: "Fecha de nacimiento"
+    not_provided: "No proporcionado"
+    contact_location: "Contacto y ubicación"
+    address: "Dirección"
+    no_address: "No se proporcionó dirección"
+    account_activity: "Actividad de la cuenta"
+    total_tasks: "Tareas totales"
+    completed: "Completadas"
+    in_progress: "En progreso"
+    days_active: "Días activos"
+    account_details: "Detalles de la cuenta"
+    member_since: "Miembro desde"
+    last_updated: "Última actualización"
+  
+  home_stats:
+    total_tasks: "Tareas totales"
+    completed: "Completadas"
+    in_progress: "En progreso"
+    quick_actions: "Acciones rápidas"
+    new_task: "Nueva tarea"
+    new_board: "Nuevo tablero"
+    invite_team: "Invitar equipo"
+    view_reports: "Ver informes"
+    recent_activity: "Actividad reciente"
+    no_activity: "Sin actividad reciente"
+    start_creating: "Comienza a crear tareas para ver tu actividad aquí"
+  
+  features:
+    task_management:
+      title: "Gestión de tareas"
+      description: "Organiza tu trabajo con tableros y listas potentes. Rastrea el progreso y nunca pierdas una fecha límite."
+    team_collaboration:
+      title: "Colaboración en equipo"
+      description: "Trabaja junto sin problemas. Comparte tableros, asigna tareas y mantén a todos sincronizados."
+    analytics:
+      title: "Análisis e insights"
+      description: "Rastrea tu productividad con informes detallados e insights. Toma decisiones basadas en datos."
+  
+  cta:
+    title: "¿Listo para aumentar tu productividad?"
+    subtitle: "Únete a miles de usuarios que ya están logrando más con Focusboard."
+    button: "Comenzar hoy"
+  
+  footer:
+    product: "Producto"
+    features: "Características"
+    pricing: "Precios"
+    roadmap: "Hoja de ruta"
+    changelog: "Registro de cambios"
+    company: "Empresa"
+    about: "Acerca de"
+    blog: "Blog"
+    careers: "Carreras"
+    contact: "Contacto"
+    support: "Soporte"
+    help_center: "Centro de ayuda"
+    documentation: "Documentación"
+    privacy_policy: "Política de privacidad"
+    terms_of_service: "Términos de servicio"
+    tagline: "Tu compañero de productividad para mantenerte enfocado y organizado."
+    rights_reserved: "Todos los derechos reservados."
+    made_with_love: "Hecho con"
+    by_team: "por el equipo Focusboard"
+    select_language: "Seleccionar idioma"
+  
+  edit_profile:
+    title: "Editar perfil"
+    subtitle: "Actualiza tu información personal y configuración"
+    profile_photo: "Foto de perfil"
+    photo: "Foto"
+    photo_hint: "JPG, PNG o GIF (MÁX. 5MB)"
+    personal_info: "Información personal"
+    first_name: "Nombre"
+    last_name: "Apellido"
+    email: "Correo electrónico"
+    birth_date: "Fecha de nacimiento"
+    street_address: "Dirección"
+    street_address_placeholder: "Calle Principal 123"
+    city: "Ciudad"
+    city_placeholder: "Madrid"
+    postal_code: "Código Postal"
+    postal_code_placeholder: "28001"
+    country: "País"
+    country_placeholder: "España"
+    contact_location: "Contacto y ubicación"
+    save_changes: "Guardar cambios"
+    back_to_profile: "← Volver al Perfil"
+  
+  settings:
+    title: "Configuración"
+    subtitle: "Gestiona tu contraseña y configuración de cuenta"
+    dark_mode:
+      title: "Modo Oscuro"
+      description: "Activa el modo oscuro para reducir la fatiga visual"
+      enable: "Activar Modo Oscuro"
+      disable: "Desactivar Modo Oscuro"
+      toggled: "Modo de visualización cambiado con éxito"
+    change_password:
+      title: "Cambiar Contraseña"
+      description: "Actualiza tu contraseña para mantener tu cuenta segura"
+      current_password: "Contraseña Actual"
+      current_password_placeholder: "Ingresa tu contraseña actual"
+      new_password: "Nueva Contraseña"
+      new_password_placeholder: "Ingresa tu nueva contraseña"
+      confirm_password: "Confirmar Nueva Contraseña"
+      confirm_password_placeholder: "Confirma tu nueva contraseña"
+      password_hint: "Mínimo %{count} caracteres"
+      submit: "Actualizar Contraseña"
+    danger_zone:
+      title: "Zona Peligrosa"
+      description: "Una vez que elimines tu cuenta, no hay vuelta atrás. Todos tus datos serán eliminados permanentemente."
+      delete_account: "Eliminar Mi Cuenta"
+      confirm_message: "¿Estás absolutamente seguro? Esta acción es irreversible y todos tus datos serán eliminados permanentemente."
+    back_to_profile: "← Volver al Perfil"
+  
+  password:
+    forgot:
+      title: "¿Olvidaste tu contraseña?"
+      subtitle: "¡No te preocupes! Ingresa tu correo y te enviaremos instrucciones de restablecimiento"
+      email: "Correo electrónico"
+      submit: "Enviar instrucciones"
+      remember: "¿Recuerdas tu contraseña?"
+    reset:
+      title: "Cambiar contraseña"
+      subtitle: "Ingresa tu nueva contraseña a continuación"
+      new_password: "Nueva contraseña"
+      confirm_password: "Confirmar nueva contraseña"
+      submit: "Cambiar contraseña"
+      security_note: "Asegúrate de usar una contraseña fuerte y única"
+  
+  common:
+    optional: "Opcional"
+    required: "Requerido"
+    save: "Guardar"
+    cancel: "Cancelar"
+    delete: "Eliminar"
+    edit: "Editar"
+    back: "Volver"
+    loading: "Cargando..."
+    error: "Error"
+    success: "Éxito"
+  
+  errors:
+    format: "%{attribute} %{message}"
+    template:
+      header:
+        one: "1 error impidió que se guardara este %{model}"
+        other: "%{count} errores impidieron que se guardara este %{model}"
+      body: "Hubo problemas con los siguientes campos:"
+    prevented_saving: "error impidió que esto se guardara:"
+    prevented_saving_plural: "errores impidieron que esto se guardara:"
+    messages:
+      blank: "no puede estar vacío"
+      too_short: "es demasiado corto (mínimo %{count} caracteres)"
+      too_long: "es demasiado largo (máximo %{count} caracteres)"
+      invalid: "es inválido"
+      taken: "ya está en uso"
+      confirmation: "no coincide con la confirmación"
+    attributes:
+      email:
+        blank: "El correo electrónico no puede estar vacío"
+        invalid: "El correo electrónico no es válido"
+      password:
+        blank: "La contraseña no puede estar vacía"
+        too_short: "La contraseña es demasiado corta"
+      first_name:
+        blank: "El nombre no puede estar vacío"
+        too_short: "El nombre es demasiado corto"
+      last_name:
+        blank: "El apellido no puede estar vacío"
+        too_short: "El apellido es demasiado corto"
+      birth_date:
+        blank: "La fecha de nacimiento no puede estar vacía"
+  
+  # Date and time formats
+  date:
+    formats:
+      default: "%d/%m/%Y"
+      short: "%d %b"
+      long: "%d de %B de %Y"
+    day_names: [domingo, lunes, martes, miércoles, jueves, viernes, sábado]
+    abbr_day_names: [dom, lun, mar, mié, jue, vie, sáb]
+    month_names: [~, enero, febrero, marzo, abril, mayo, junio, julio, agosto, septiembre, octubre, noviembre, diciembre]
+    abbr_month_names: [~, ene, feb, mar, abr, may, jun, jul, ago, sep, oct, nov, dic]
+  
+  time:
+    formats:
+      default: "%d de %B de %Y %H:%M"
+      short: "%d %b %H:%M"
+      long: "%A, %d de %B de %Y a las %H:%M"
+    am: "am"
+    pm: "pm"
+  
+  # Devise translations
+  devise:
+    sessions:
+      signed_in: "Sesión iniciada correctamente."
+      signed_out: "Sesión cerrada correctamente."
+      already_signed_out: "Sesión cerrada correctamente."
+      user:
+        signed_in: "Sesión iniciada correctamente."
+    passwords:
+      send_instructions: "Recibirás un correo con instrucciones sobre cómo restablecer tu contraseña."
+      updated: "Tu contraseña ha sido cambiada correctamente."
+      updated_not_active: "Tu contraseña ha sido cambiada correctamente."
+      send_paranoid_instructions: "Si tu correo existe en nuestra base de datos, recibirás un enlace de recuperación."
+    registrations:
+      signed_up: "¡Bienvenido! Te has registrado correctamente."
+      signed_up_but_inactive: "Te has registrado correctamente. Sin embargo, no puedes iniciar sesión porque tu cuenta aún no está activada."
+      signed_up_but_locked: "Te has registrado correctamente. Sin embargo, no puedes iniciar sesión porque tu cuenta está bloqueada."
+      signed_up_but_unconfirmed: "Se ha enviado un mensaje con un enlace de confirmación a tu correo."
+      update_needs_confirmation: "Tu cuenta ha sido actualizada pero necesitamos verificar tu nueva dirección de correo."
+      updated: "Tu cuenta ha sido actualizada correctamente."
+      destroyed: "¡Adiós! Tu cuenta ha sido eliminada correctamente."
+    unlocks:
+      send_instructions: "Recibirás un correo con instrucciones sobre cómo desbloquear tu cuenta."
+      send_paranoid_instructions: "Si tu cuenta existe, recibirás un correo con instrucciones para desbloquearla."
+      unlocked: "Tu cuenta ha sido desbloqueada correctamente."
+    omniauth_callbacks:
+      success: "Autenticado correctamente desde %{kind}."
+      failure: "No pudimos autenticarte desde %{kind}: %{reason}."
+    mailer:
+      confirmation_instructions:
+        subject: "Instrucciones de confirmación"
+      reset_password_instructions:
+        subject: "Instrucciones para restablecer contraseña"
+      unlock_instructions:
+        subject: "Instrucciones de desbloqueo"
+      email_changed:
+        subject: "Correo cambiado"
+      password_change:
+        subject: "Contraseña cambiada"
+    failure:
+      already_authenticated: "Ya has iniciado sesión."
+      inactive: "Tu cuenta aún no está activada."
+      invalid: "Correo o contraseña incorrectos."
+      locked: "Tu cuenta está bloqueada."
+      last_attempt: "Te queda un intento más antes de que tu cuenta sea bloqueada."
+      not_found_in_database: "Correo o contraseña incorrectos."
+      timeout: "Tu sesión ha expirado. Por favor, inicia sesión nuevamente."
+      unauthenticated: "Necesitas iniciar sesión o registrarte para continuar."
+      unconfirmed: "Debes confirmar tu cuenta antes de continuar."
+  
+  # Shared links
+  links:
+    sign_in: "Iniciar sesión"
+    sign_up: "Registrarse"
+    forgot_password: "¿Olvidaste tu contraseña?"
+    didnt_receive_confirmation: "¿No recibiste las instrucciones de confirmación?"
+    didnt_receive_unlock: "¿No recibiste las instrucciones de desbloqueo?"
+    sign_in_with: "Iniciar sesión con %{provider}"

@@ -1,0 +1,375 @@
+zh:
+  app_name: "Focusboard"
+  
+  # ActiveRecord errors
+  activerecord:
+    errors:
+      messages:
+        blank: "不能为空"
+        too_short: "太短（最少%{count}个字符）"
+        too_long: "太长（最多%{count}个字符）"
+        invalid: "无效"
+        taken: "已被使用"
+        not_a_number: "不是数字"
+        greater_than: "必须大于%{count}"
+        greater_than_or_equal_to: "必须大于或等于%{count}"
+        less_than: "必须小于%{count}"
+        less_than_or_equal_to: "必须小于或等于%{count}"
+        confirmation: "与确认不匹配"
+        accepted: "必须接受"
+        empty: "不能为空"
+        present: "必须为空"
+        required: "必须存在"
+        inclusion: "不在列表中"
+        exclusion: "已被保留"
+        wrong_length: "长度不正确（应为%{count}个字符）"
+      models:
+        user:
+          attributes:
+            email:
+              blank: "电子邮件不能为空"
+              invalid: "电子邮件无效"
+              taken: "该电子邮件已被使用"
+            password:
+              blank: "密码不能为空"
+              too_short: "密码太短（最少%{count}个字符）"
+            password_confirmation:
+              confirmation: "密码确认不匹配"
+            first_name:
+              blank: "名字不能为空"
+              too_short: "名字太短（最少%{count}个字符）"
+              too_long: "名字太长（最多%{count}个字符）"
+            last_name:
+              blank: "姓氏不能为空"
+              too_short: "姓氏太短（最少%{count}个字符）"
+              too_long: "姓氏太长（最多%{count}个字符）"
+            birth_date:
+              blank: "出生日期不能为空"
+              invalid: "出生日期无效"
+            username:
+              blank: "用户名不能为空"
+              taken: "该用户名已被使用"
+              invalid: "用户名只能包含小写字母、数字、点和下划线"
+            current_password:
+              blank: "当前密码不能为空"
+              invalid: "当前密码不正确"
+    attributes:
+      user:
+        email: "电子邮件"
+        password: "密码"
+        password_confirmation: "确认密码"
+        current_password: "当前密码"
+        first_name: "名字"
+        last_name: "姓氏"
+        birth_date: "出生日期"
+        address: "地址"
+        username: "用户名"
+        photo: "照片"
+    models:
+      user: "用户"
+  
+  nav:
+    home: "首页"
+    features: "功能"
+    about: "关于"
+    sign_in: "登录"
+    sign_up: "注册"
+    sign_out: "退出"
+    view_profile: "查看资料"
+    edit_profile: "编辑资料"
+    settings: "设置"
+  
+  home:
+    welcome_back: "欢迎回来，%{name}！👋"
+    ready_productivity: "准备好提高今天的生产力了吗？"
+    hero_title: "保持专注，完成任务"
+    hero_subtitle: "Focusboard帮助您组织任务、与团队协作并轻松实现目标。"
+    get_started: "免费开始"
+  
+  auth:
+    sign_in:
+      title: "欢迎回来"
+      subtitle: "登录以继续使用Focusboard"
+      email: "电子邮件"
+      password: "密码"
+      remember_me: "记住我"
+      forgot_password: "忘记密码？"
+      submit: "登录"
+      security_note: "受行业标准加密保护"
+    sign_up:
+      title: "创建您的账户"
+      subtitle: "加入Focusboard，开始提高生产力"
+      first_name: "名字"
+      last_name: "姓氏"
+      email: "电子邮件"
+      birth_date: "出生日期"
+      street_address: "街道地址"
+      street_address_placeholder: "主街123号"
+      city: "城市"
+      city_placeholder: "北京"
+      postal_code: "邮政编码"
+      postal_code_placeholder: "100000"
+      country: "国家"
+      country_placeholder: "中国"
+      password: "密码"
+      password_confirmation: "确认密码"
+      chars_min: "个字符最少"
+      submit: "创建账户"
+      terms_note: "注册即表示您同意我们的服务条款和隐私政策"
+  
+  profile:
+    edit_profile: "编辑资料"
+    personal_info: "个人信息"
+    full_name: "全名"
+    email_address: "电子邮件地址"
+    date_of_birth: "出生日期"
+    not_provided: "未提供"
+    contact_location: "联系方式和位置"
+    address: "地址"
+    no_address: "未提供地址"
+    account_activity: "账户活动"
+    total_tasks: "总任务数"
+    completed: "已完成"
+    in_progress: "进行中"
+    days_active: "活跃天数"
+    account_details: "账户详情"
+    member_since: "注册时间"
+    last_updated: "最后更新"
+  
+  home_stats:
+    total_tasks: "总任务数"
+    completed: "已完成"
+    in_progress: "进行中"
+    quick_actions: "快速操作"
+    new_task: "新任务"
+    new_board: "新看板"
+    invite_team: "邀请团队"
+    view_reports: "查看报告"
+    recent_activity: "最近活动"
+    no_activity: "没有最近的活动"
+    start_creating: "开始创建任务以在此处查看您的活动"
+  
+  features:
+    task_management:
+      title: "任务管理"
+      description: "使用强大的看板和列表组织您的工作。跟踪进度，永不错过截止日期。"
+    team_collaboration:
+      title: "团队协作"
+      description: "无缝协作。共享看板，分配任务，让每个人保持同步。"
+    analytics:
+      title: "分析和洞察"
+      description: "通过详细的报告和洞察跟踪您的生产力。做出数据驱动的决策。"
+  
+  cta:
+    title: "准备好提高您的生产力了吗？"
+    subtitle: "加入数千名已经通过Focusboard完成更多工作的用户。"
+    button: "立即开始"
+  
+  footer:
+    product: "产品"
+    features: "功能"
+    pricing: "定价"
+    roadmap: "路线图"
+    changelog: "更新日志"
+    company: "公司"
+    about: "关于"
+    blog: "博客"
+    careers: "职业"
+    contact: "联系"
+    support: "支持"
+    help_center: "帮助中心"
+    documentation: "文档"
+    privacy_policy: "隐私政策"
+    terms_of_service: "服务条款"
+    tagline: "您的生产力伴侣，帮助您保持专注和有序。"
+    rights_reserved: "保留所有权利。"
+    made_with_love: "用"
+    by_team: "由Focusboard团队制作"
+    select_language: "选择语言"
+  
+  edit_profile:
+    title: "编辑资料"
+    subtitle: "更新您的个人信息和设置"
+    profile_photo: "个人照片"
+    photo: "照片"
+    photo_hint: "JPG、PNG或GIF（最大5MB）"
+    personal_info: "个人信息"
+    first_name: "名字"
+    last_name: "姓氏"
+    email: "电子邮件"
+    birth_date: "出生日期"
+    street_address: "街道地址"
+    street_address_placeholder: "主街123号"
+    city: "城市"
+    city_placeholder: "北京"
+    postal_code: "邮政编码"
+    postal_code_placeholder: "100000"
+    country: "国家"
+    country_placeholder: "中国"
+    contact_location: "联系方式和位置"
+    save_changes: "保存更改"
+    back_to_profile: "← 返回资料"
+  
+  settings:
+    title: "设置"
+    subtitle: "管理您的密码和账户设置"
+    dark_mode:
+      title: "深色模式"
+      description: "启用深色模式以减少眼睛疲劳"
+      enable: "启用深色模式"
+      disable: "禁用深色模式"
+      toggled: "显示模式已成功更改"
+    change_password:
+      title: "更改密码"
+      description: "更新您的密码以保护您的账户安全"
+      current_password: "当前密码"
+      current_password_placeholder: "输入您的当前密码"
+      new_password: "新密码"
+      new_password_placeholder: "输入您的新密码"
+      confirm_password: "确认新密码"
+      confirm_password_placeholder: "确认您的新密码"
+      password_hint: "最少%{count}个字符"
+      submit: "更新密码"
+    danger_zone:
+      title: "危险区域"
+      description: "一旦删除您的账户，将无法恢复。您的所有数据将被永久删除。"
+      delete_account: "删除我的账户"
+      confirm_message: "您确定吗？此操作不可逆，您的所有数据将被永久删除。"
+    back_to_profile: "← 返回资料"
+  
+  password:
+    forgot:
+      title: "忘记密码？"
+      subtitle: "别担心！输入您的电子邮件，我们将向您发送重置说明"
+      email: "电子邮件"
+      submit: "发送重置说明"
+      remember: "记得您的密码？"
+    reset:
+      title: "更改密码"
+      subtitle: "在下方输入您的新密码"
+      new_password: "新密码"
+      confirm_password: "确认新密码"
+      submit: "更改密码"
+      security_note: "确保使用强大且唯一的密码"
+  
+  common:
+    optional: "可选"
+    required: "必填"
+    save: "保存"
+    cancel: "取消"
+    delete: "删除"
+    edit: "编辑"
+    back: "返回"
+    loading: "加载中..."
+    error: "错误"
+    success: "成功"
+  
+  errors:
+    format: "%{attribute}%{message}"
+    template:
+      header:
+        one: "1个错误阻止了保存此%{model}"
+        other: "%{count}个错误阻止了保存此%{model}"
+      body: "以下字段存在问题："
+    prevented_saving: "个错误阻止了保存："
+    prevented_saving_plural: "个错误阻止了保存："
+    messages:
+      blank: "不能为空"
+      too_short: "太短（最少%{count}个字符）"
+      too_long: "太长（最多%{count}个字符）"
+      invalid: "无效"
+      taken: "已被使用"
+      confirmation: "与确认不匹配"
+    attributes:
+      email:
+        blank: "电子邮件不能为空"
+        invalid: "电子邮件无效"
+      password:
+        blank: "密码不能为空"
+        too_short: "密码太短"
+      first_name:
+        blank: "名字不能为空"
+        too_short: "名字太短"
+      last_name:
+        blank: "姓氏不能为空"
+        too_short: "姓氏太短"
+      birth_date:
+        blank: "出生日期不能为空"
+  
+  # Date and time formats
+  date:
+    formats:
+      default: "%Y/%m/%d"
+      short: "%m月%d日"
+      long: "%Y年%m月%d日"
+    day_names: [星期日, 星期一, 星期二, 星期三, 星期四, 星期五, 星期六]
+    abbr_day_names: [周日, 周一, 周二, 周三, 周四, 周五, 周六]
+    month_names: [~, 一月, 二月, 三月, 四月, 五月, 六月, 七月, 八月, 九月, 十月, 十一月, 十二月]
+    abbr_month_names: [~, 1月, 2月, 3月, 4月, 5月, 6月, 7月, 8月, 9月, 10月, 11月, 12月]
+  
+  time:
+    formats:
+      default: "%Y年%m月%d日 %H:%M"
+      short: "%m月%d日 %H:%M"
+      long: "%Y年%m月%d日 %A %H:%M"
+    am: "上午"
+    pm: "下午"
+  
+  # Devise translations
+  devise:
+    sessions:
+      signed_in: "登录成功。"
+      signed_out: "退出成功。"
+      already_signed_out: "退出成功。"
+      user:
+        signed_in: "登录成功。"
+    passwords:
+      send_instructions: "您将收到一封包含重置密码说明的电子邮件。"
+      updated: "您的密码已成功更改。"
+      updated_not_active: "您的密码已成功更改。"
+      send_paranoid_instructions: "如果您的电子邮件存在于我们的数据库中，您将收到密码恢复链接。"
+    registrations:
+      signed_up: "欢迎！您已成功注册。"
+      signed_up_but_inactive: "您已成功注册。但是，您无法登录，因为您的帐户尚未激活。"
+      signed_up_but_locked: "您已成功注册。但是，您无法登录，因为您的帐户已被锁定。"
+      signed_up_but_unconfirmed: "确认链接已发送到您的电子邮件地址。"
+      update_needs_confirmation: "您的帐户已更新，但我们需要验证您的新电子邮件地址。"
+      updated: "您的帐户已成功更新。"
+      destroyed: "再见！您的帐户已成功删除。"
+    unlocks:
+      send_instructions: "您将收到一封包含解锁帐户说明的电子邮件。"
+      send_paranoid_instructions: "如果您的帐户存在，您将收到解锁说明的电子邮件。"
+      unlocked: "您的帐户已成功解锁。"
+    omniauth_callbacks:
+      success: "已从%{kind}成功验证。"
+      failure: "无法从%{kind}验证您：%{reason}。"
+    mailer:
+      confirmation_instructions:
+        subject: "确认说明"
+      reset_password_instructions:
+        subject: "重置密码说明"
+      unlock_instructions:
+        subject: "解锁说明"
+      email_changed:
+        subject: "电子邮件已更改"
+      password_change:
+        subject: "密码已更改"
+    failure:
+      already_authenticated: "您已登录。"
+      inactive: "您的帐户尚未激活。"
+      invalid: "电子邮件或密码无效。"
+      locked: "您的帐户已被锁定。"
+      last_attempt: "您还有一次尝试机会，之后您的帐户将被锁定。"
+      not_found_in_database: "电子邮件或密码无效。"
+      timeout: "您的会话已过期。请重新登录以继续。"
+      unauthenticated: "您需要登录或注册才能继续。"
+      unconfirmed: "您必须先确认您的帐户才能继续。"
+  
+  # Shared links
+  links:
+    sign_in: "登录"
+    sign_up: "注册"
+    forgot_password: "忘记密码？"
+    didnt_receive_confirmation: "没有收到确认说明？"
+    didnt_receive_unlock: "没有收到解锁说明？"
+    sign_in_with: "使用%{provider}登录"
